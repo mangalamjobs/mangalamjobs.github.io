@@ -1,0 +1,60 @@
+.subscription-hero { padding: 84px 0 78px; position: relative; overflow: hidden; background: var(--navy); color: white; }
+.subscription-hero::after { content: "₹"; position: absolute; right: 5%; bottom: -125px; color: rgba(255,255,255,.035); font: 500 340px var(--serif); }
+.subscription-hero__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 90px; }
+.subscription-hero h1 { margin: 0; font: 500 clamp(48px,5vw,68px)/1.06 var(--display); letter-spacing: -.055em; }
+.subscription-hero h1 em, .subscription-form-section h2 em { color: var(--gold-light); font-family: var(--serif); }
+.subscription-hero__grid > p { margin: 0 0 5px; color: #afbbc3; font-size: 13px; line-height: 1.9; }
+.plans { padding: 95px 0 110px; background: #eeeae2; }
+.plans__heading { display: grid; grid-template-columns: 1fr .65fr; align-items: end; gap: 80px; }
+.plans__heading h2 { margin: 13px 0 0; color: var(--navy); font: 500 46px/1.12 var(--display); letter-spacing: -.05em; }
+.plans__heading h2 em { color: #9b7540; font-family: var(--serif); }
+.plans__heading > p { margin: 0 0 5px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.plan-grid { max-width: 920px; margin: 55px auto 0; display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; align-items: stretch; }
+.plan-card { position: relative; min-height: 490px; padding: 42px; display: flex; flex-direction: column; border: 1px solid #cfc8bb; background: var(--paper); }
+.plan-card--featured { border-top: 3px solid var(--gold); background: var(--navy); color: white; box-shadow: 0 22px 55px rgba(7,27,45,.18); }
+.plan-card__badge { position: absolute; right: 25px; top: 24px; color: var(--gold-light); font-size: 8px; text-transform: uppercase; letter-spacing: .12em; }
+.plan-card__name { margin: 0 0 25px; color: #8c6a3b; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.plan-card__price { display: flex; align-items: flex-start; color: var(--navy); }
+.plan-card--featured .plan-card__price { color: white; }
+.plan-card__price span { margin: 10px 5px 0 0; font: 500 20px var(--display); }
+.plan-card__price strong { font: 500 70px/1 var(--display); letter-spacing: -.06em; }
+.plan-card__validity { margin: 10px 0 28px; color: #7c858a; font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.plan-card--featured .plan-card__validity { color: #9dabb4; }
+.plan-card ul { margin: 0 0 36px; padding: 22px 0 0; list-style: none; border-top: 1px solid #d8d2c8; }
+.plan-card--featured ul { border-color: rgba(255,255,255,.15); }
+.plan-card li { margin-bottom: 15px; display: flex; gap: 12px; color: #536067; font-size: 11px; }
+.plan-card--featured li { color: #c0c9cf; }
+.plan-card li span { color: #9b7540; }
+.plan-card .button { width: 100%; margin-top: auto; }
+.subscription-form-section { padding: 100px 0; background: #102a3f; color: white; }
+.subscription-form-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 95px; align-items: start; }
+.subscription-form-section h2 { margin: 15px 0 23px; font: 500 45px/1.14 var(--display); letter-spacing: -.05em; }
+.subscription-form-grid > div:first-child > p:not(.eyebrow) { color: #afbbc3; font-size: 12px; line-height: 1.9; }
+.subscription-note { margin-top: 35px; padding: 20px 0 0 20px; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid rgba(255,255,255,.16); border-left: 2px solid var(--gold); }
+.subscription-note strong { color: var(--gold-light); font-size: 10px; text-transform: uppercase; letter-spacing: .09em; }
+.subscription-note span { color: #a7b3bb; font-size: 9px; line-height: 1.7; }
+.subscription-form-card { min-height: 420px; padding: 42px; background: var(--paper); color: var(--ink); }
+.subscription-form-card fieldset { margin: 0 0 25px; padding: 0; border: 0; }
+.subscription-form-card legend, .subscription-fields label > span { display: block; margin-bottom: 9px; color: #56636a; font-size: 9px; font-weight: 600; }
+.plan-options { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+.plan-options label { cursor: pointer; }
+.plan-options input { position: absolute; opacity: 0; }
+.plan-options label > span { padding: 16px; display: flex; flex-direction: column; gap: 5px; border: 1px solid #d5d0c7; }
+.plan-options input:checked + span { border-color: var(--gold); background: var(--cream); box-shadow: inset 3px 0 var(--gold); }
+.plan-options strong { color: var(--navy); font: 600 13px var(--display); }
+.plan-options small { color: var(--muted); font-size: 8px; }
+.subscription-fields { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; margin-bottom: 26px; }
+.subscription-fields label { display: block; }
+.subscription-fields input { width: 100%; height: 49px; padding: 0 13px; border: 1px solid #d5d0c7; outline: 0; background: #fff; font: 10px var(--sans); }
+.subscription-fields input:focus { border-color: var(--gold); }
+.subscription-form-card .button { width: 100%; }
+.form-honeypot { position: absolute !important; left: -10000px !important; }
+.form-error { display: block; margin-top: 6px; color: #a33b32; font-size: 8px; }
+.form-disclaimer { margin: 15px 0 0; color: var(--muted); font-size: 8px; text-align: center; }
+.subscription-success { padding: 50px 25px; text-align: center; }
+.subscription-success > span { width: 55px; height: 55px; margin: 0 auto 22px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: var(--gold-light); font-size: 20px; }
+.subscription-success h3 { margin: 0; color: var(--navy); font: 500 27px var(--display); }
+.subscription-success p { margin: 14px auto 24px; max-width: 440px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.subscription-success a { color: #8c6836; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+@media (max-width: 900px) { .subscription-hero__grid, .plans__heading, .subscription-form-grid { grid-template-columns: 1fr; gap: 35px; } .plan-grid { max-width: none; } }
+@media (max-width: 620px) { .subscription-hero { padding: 60px 0; } .plans { padding: 68px 0; } .plan-grid { grid-template-columns: 1fr; } .plan-card { min-height: 450px; padding: 32px 25px; } .subscription-form-section { padding: 68px 0; } .subscription-form-card { padding: 28px 20px; } .subscription-fields, .plan-options { grid-template-columns: 1fr; } }
